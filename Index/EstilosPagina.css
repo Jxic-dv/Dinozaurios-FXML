@@ -1,0 +1,154 @@
+/* Estilos Base - Estética Steam 2005 */
+body {
+    background-color: #4a513b; /* El verde oliva del fondo */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #d8d8d8;
+}
+
+#main-container {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #d9d9d9; /* Fondo gris claro de la zona central */
+    border: 1px solid #333;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+/* Header Negro con logo Steam/Dino */
+header {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #000;
+    padding: 5px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #888;
+}
+nav span { margin: 0 15px; cursor: pointer; }
+nav span:hover { color: #fff; }
+
+/* Contenedor Flex */
+.content-wrapper {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+}
+
+/* Columna Izquierda (Sidebar) */
+.sidebar {
+    width: 200px;
+}
+
+.side-box {
+    background: #3e4431; /* Fondo oscuro de los widgets */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #2a2e21;
+    overflow: hidden;
+}
+
+.side-box h3 {
+    background: linear-gradient(to bottom, #5d644d, #3e4431);
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #c4cfa1;
+    border-bottom: 1px solid #2a2e21;
+}
+
+.side-box ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 11px;
+}
+
+.side-box li { margin-bottom: 5px; color: #fff; cursor: pointer; }
+.side-box li:hover { text-decoration: underline; }
+
+/* Área Principal (Derecha) */
+.main-panel {
+    flex: 1;
+}
+
+/* Gran Banner de Producto Principal */
+.hero-banner {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #b1b1b1;
+    height: 350px;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    color: #333;
+}
+
+.hero-img {
+    width: 325px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+}
+
+.hero-text {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+/* Cajas de Ofertas inferiores */
+.offers-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.offer-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #b1b1b1;
+    padding: 10px;
+    color: #333;
+    font-size: 12px;
+}
+
+.offer-card h4 { margin: 0; color: #000; text-transform: uppercase; border-bottom: 1px solid #ccc; }
+.price { font-size: 24px; font-weight: bold; color: #000; margin: 10px 0; }
+
+/* Sección de Soporte y Noticias Inferior */
+.bottom-sections {
+    display: flex;
+    padding: 0 15px 15px 15px;
+    gap: 15px;
+}
+
+.news-box {
+    flex: 1;
+    background: #c8ccb7;
+    border: 1px solid #9ea388;
+    border-radius: 8px;
+    padding: 10px;
+    color: #444;
+    font-size: 12px;
+}
+
+.news-box h3 { margin-top: 0; font-size: 14px; color: #222; border-bottom: 1px solid #9ea388; }
+
+footer {
+    background-color: #4a513b;
+    color: #7a8269;
+    font-size: 10px;
+    padding: 20px;
+    text-align: center;
+}
