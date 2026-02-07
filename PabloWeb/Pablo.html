@@ -5,18 +5,61 @@
     <title>Mi Perfil Pablo</title>
     <link rel="stylesheet" href="estilos.css">
     <style>
-        #pantalla-contacto {
+        /* Ocultamos las pantallas de Galería y Contacto al inicio */
+        #pantalla-contacto, #pantalla-galeria {
             display: none;
+            padding-top: 20px;
+        }
+
+        /* ESTILO TIPO PERFIL DE INSTAGRAM */
+        .insta-card {
+            background: #000;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
             text-align: center;
-            padding-top: 50px;
+        }
+
+        .insta-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .insta-btn {
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* Esto asegura que el post insertado no se salga */
+        iframe.instagram-media {
+            min-width: 100% !important; 
+            margin: 0 !important;
         }
     </style>
 </head>
 <body>
 
+    <video autoplay muted loop id="video-fondo" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -1; object-fit: cover; opacity: 0.6;">
+        <source src="fondo.mp4" type="video/mp4">
+    </video>
+
     <div class="nav-container">
         <a href="#" class="tab activo" onclick="mostrarHome(this)">Home</a>
-        <a href="#" class="tab" onclick="mostrarHome(this)">Galería</a>
+        <a href="#" class="tab" onclick="mostrarGaleria(this)">Galería</a>
         <a href="#" class="tab" onclick="mostrarContacto(this)">Contacto</a>
     </div>
 
@@ -41,7 +84,7 @@
         <div class="grid-container">
             <div class="glossy-box">
                 <h3>¿Qué hay de nuevo?</h3>
-                <p>Menú simplificado. ¡Ahora es más fácil navegar!</p>
+                <p>En la galería ahora puedes ver mi post destacado de Instagram.</p>
             </div>
 
             <div class="glossy-box">
@@ -68,45 +111,86 @@
             </div> 
         </div>
 
-    </div> <div id="pantalla-contacto">
+    </div> 
+
+    <div id="pantalla-galeria">
+        
+        <h2 style="color: white; text-align: center; margin-bottom: 20px;">Mi Instagram</h2>
+
+        <div class="insta-card">
+            
+            <div class="insta-header">
+                <img src="Foto_Perfil_intagram.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid #E1306C;">
+                <div>
+                    <h3 style="margin: 0; color: white;">Pablo</h3>
+                    <p style="margin: 5px 0 0 0; color: #aaa; font-size: 12px;">Estudiante IT | Guatemala 🇬🇹</p>
+                    
+                    <a href="https://www.instagram.com/_.pablotsqi/" target="_blank" class="insta-btn">Seguir</a>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #333; margin-bottom: 15px;">
+
+            <p style="font-size: 11px; color: #888; margin-bottom: 10px;">Post Destacado</p>
+            
+            <div style="background: #222; padding: 20px; color: #aaa; font-size: 12px; border-radius: 5px;">
+                Para que salga tu foto real:<br>
+                1. Ve a Instagram en tu PC.<br>
+                2. Abre una foto tuya.<br>
+                3. Clic en los 3 puntitos (...) -> Insertar (Embed).<br>
+                4. Copia el código y pégalo aquí reemplazando este cuadro gris.
+            </div>
+            </div>
+
+    </div>
+
+
+    <div id="pantalla-contacto">
         
         <h2 style="color: white; margin-bottom: 30px;">Selecciona una plataforma</h2>
 
         <div class="glossy-box" style="max-width: 400px; margin: 0 auto;">
             
-            <a href="https://wa.me/50212345678" target="_blank" style="text-decoration: none;">
+            <a href="https://wa.me/50236117735" target="_blank" style="text-decoration: none;">
                 <button style="width: 100%; margin-bottom: 15px; background: #25D366; color: white; border: 1px solid #128C7E; padding: 15px; cursor: pointer; font-weight: bold; font-size: 16px; border-radius: 5px;">
-                    Abrir WhatsApp
-                </button>
-            </a>
-
-            <a href="https://discord.gg/TU_CODIGO" target="_blank" style="text-decoration: none;">
-                <button style="width: 100%; margin-bottom: 15px; background: #5865F2; color: white; border: 1px solid #4752C4; padding: 15px; cursor: pointer; font-weight: bold; font-size: 16px; border-radius: 5px;">
-                    Ir a Discord
+                    📱 Abrir WhatsApp
                 </button>
             </a>
 
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pablodrequena@gmail.com" target="_blank" style="text-decoration: none;">
                 <button style="width: 100%; background: #333; color: white; border: 1px solid #666; padding: 15px; cursor: pointer; font-weight: bold; font-size: 16px; border-radius: 5px;">
-                    Enviar Correo
+                    📧 Enviar Correo
                 </button>
             </a>
 
         </div>
         
-        <p style="color: #666; font-size: 12px; margin-top: 20px;">Haz clic en "Home" para volver.</p>
+        <p style="color: #666; font-size: 12px; margin-top: 20px; text-align: center;">Haz clic en "Home" para volver.</p>
 
     </div>
 
+
     <script>
-        function mostrarHome(elemento) {
-            document.getElementById('pantalla-home').style.display = 'block';
+        function ocultarTodo() {
+            document.getElementById('pantalla-home').style.display = 'none';
+            document.getElementById('pantalla-galeria').style.display = 'none';
             document.getElementById('pantalla-contacto').style.display = 'none';
+        }
+
+        function mostrarHome(elemento) {
+            ocultarTodo();
+            document.getElementById('pantalla-home').style.display = 'block';
+            actualizarPestañas(elemento);
+        }
+
+        function mostrarGaleria(elemento) {
+            ocultarTodo();
+            document.getElementById('pantalla-galeria').style.display = 'block';
             actualizarPestañas(elemento);
         }
 
         function mostrarContacto(elemento) {
-            document.getElementById('pantalla-home').style.display = 'none';
+            ocultarTodo();
             document.getElementById('pantalla-contacto').style.display = 'block';
             actualizarPestañas(elemento);
         }
