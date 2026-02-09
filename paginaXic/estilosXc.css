@@ -1,0 +1,49 @@
+body{
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    
+    
+}   
+
+#divPrincipal{
+    border: 5px solid white;
+    text-align: center;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 200px;
+}
+
+#divCuerpo{
+    font-size: larger;
+}
+
+#txtBienvenida{
+
+    color: rgb(67, 213, 221);
+    
+}
+
+#txtQuienSoy{
+
+}
+
+#imgPerro{
+    transform: scaleX(110px);
+    transform: translateY(50px);
+}
+
+#bobesponja{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 300px;
+    
+}
+
+
