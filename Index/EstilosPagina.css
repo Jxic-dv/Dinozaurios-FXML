@@ -297,3 +297,70 @@ nav a:hover { text-decoration: underline; }
     padding: 15px;
     line-height: 1.4;
 }   
+
+/* 1. SIDEBAR: CAMBIAR "GAMES" POR CATEGORÍAS DE DINOS */
+.sidebar .side-box:first-child .side-header {
+    font-size: 0 !important; /* Oculta el título original */
+}
+.sidebar .side-box:first-child .side-header::before {
+    content: "Categorías de Dinos";
+    font-size: 11px;
+}
+/* Cambiar los 3 primeros enlaces de la lista */
+.sidebar .side-box:first-child .side-body li:nth-child(1) a { font-size: 0 !important; }
+.sidebar .side-box:first-child .side-body li:nth-child(1) a::before { content: "» Carnívoros"; font-size: 10px; }
+
+.sidebar .side-box:first-child .side-body li:nth-child(2) a { font-size: 0 !important; }
+.sidebar .side-box:first-child .side-body li:nth-child(2) a::before { content: "» Herbívoros"; font-size: 10px; }
+
+.sidebar .side-box:first-child .side-body li:nth-child(3) a { font-size: 0 !important; }
+.sidebar .side-box:first-child .side-body li:nth-child(3) a::before { content: "» Acuáticos"; font-size: 10px; }
+
+
+/* 2. PAQUETES: FRASES GANCHO (BRONCE, PLATA, ORO) */
+.package-list .pkg-row:nth-of-type(1)::after {
+    content: " - ¡Ideal para no ser devorado el primer día!";
+    display: block; font-size: 9px; font-weight: normal; color: #555; margin-bottom: 8px;
+}
+.package-list .pkg-row:nth-of-type(2)::after {
+    content: " - Incluye red de captura y seguro contra mordidas.";
+    display: block; font-size: 9px; font-weight: normal; color: #555; margin-bottom: 8px;
+}
+.package-list .pkg-row:nth-of-type(3)::after {
+    content: " - ¡Domina la isla! Montura de T-Rex con GPS incluida.";
+    display: block; font-size: 9px; font-weight: normal; color: #555; margin-bottom: 8px;
+}
+
+
+/* 3. LATEST NEWS: 3 NOTICIAS GRACIOSAS */
+.latest-news .news-item { font-size: 0 !important; } /* Limpia el contenido previo */
+
+/* Noticia 1: Collares */
+.latest-news .news-item:nth-child(1)::before {
+    content: "OFERTA EN COLLARES ELÉCTRICOS";
+    font-weight: bold; color: #b33e00; font-size: 10px; display: block;
+}
+.latest-news .news-item:nth-child(1)::after {
+    content: "Mantén a tu Raptor a raya. ¡Ahora con 20% más de voltaje para especímenes rebeldes!";
+    font-size: 10px; color: #333; display: block; margin-bottom: 10px;
+}
+
+/* Noticia 2: Triceratops */
+.latest-news .news-item:nth-child(2)::before {
+    content: "NUEVO LOTE DE TRICERATOPS BEBÉS";
+    font-weight: bold; color: #b33e00; font-size: 10px; display: block;
+}
+.latest-news .news-item:nth-child(2)::after {
+    content: "¡Son adorables hasta que pesan 6 toneladas! Adopta uno hoy y llévate heno gratis.";
+    font-size: 10px; color: #333; display: block; margin-bottom: 10px;
+}
+
+/* Noticia 3: T-Rex */
+.latest-news .news-item:nth-child(3)::before {
+    content: "CUIDADO: T-REX CON GRIPE AVIAR";
+    font-weight: bold; color: #b33e00; font-size: 10px; display: block;
+}
+.latest-news .news-item:nth-child(3)::after {
+    content: "Rexy ha estado estornudando fuego. Se recomienda no usar paraguas, mejor usa un búnker.";
+    font-size: 10px; color: #333; display: block;
+}
