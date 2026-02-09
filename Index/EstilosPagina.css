@@ -79,15 +79,13 @@ nav a {
 
 nav a:hover { text-decoration: underline; }
 
-/* --- CONTENIDO BLANCO INTERIOR --- */
 .inner-content {
-    background-color: #e3e3e3; /* El gris/blanco sucio de fondo */
+    background-color: #e3e3e3; 
     padding: 10px;
     display: flex;
     gap: 10px;
 }
 
-/* SIDEBAR IZQUIERDA */
 .sidebar {
     width: 170px;
     flex-shrink: 0;
@@ -131,27 +129,26 @@ nav a:hover { text-decoration: underline; }
 .side-body a { color: #333; text-decoration: none; }
 .side-body a:hover { text-decoration: underline; }
 
-/* Caja especial amarilla (Store) */
+
 .yellow-text {
     color: #e8d627;
     font-weight: bold;
 }
 
-/* MAIN PANEL DERECHA */
+
 .main-panel {
     flex: 1;
 }
 
-/* HERO BANNER (El grande) */
+
 .hero-banner {
     background: #fff;
-    height: 280px; /* Altura ajustada a la imagen */
+    height: 280px; 
     border: 1px solid #999;
     border-radius: 5px;
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    /* Sutil degradado radial como el original */
     background: radial-gradient(circle at 30% 50%, #ffffff 0%, #dcdcdc 100%);
 }
 
@@ -198,7 +195,6 @@ nav a:hover { text-decoration: underline; }
     margin-left: 10px;
 }
 
-/* OFFERS GRID (Dos columnas abajo) */
 .offers-grid {
     display: flex;
     gap: 10px;
@@ -212,18 +208,23 @@ nav a:hover { text-decoration: underline; }
     padding: 10px;
     position: relative;
     min-height: 180px;
+
 }
 
 .offer-col h3 {
     margin: 0 0 5px 0;
     font-size: 12px;
     color: #555;
+    position: relative; 
+    z-index: 2;
 }
 
 .offer-col h2 {
     margin: 0;
     font-size: 14px;
     color: #333;
+    position: relative; 
+    z-index: 2;
 }
 
 .big-price {
@@ -233,6 +234,26 @@ nav a:hover { text-decoration: underline; }
     margin: 10px 0;
     color: #000;
     letter-spacing: -1px;
+    position: relative; /* Necesario para que z-index funcione */
+    z-index: 2;
+    
+}
+
+#imgOferta{
+    display: block;
+    position: absolute; /* Clave para que flote */
+    top: 50%;           /* Centrado vertical opcional */
+    left: 50%;          /* Centrado horizontal opcional */
+    transform: translate(-13.5%, -60.6%); /* Centrado perfecto */
+    height: 170px;     
+    z-index: 0;       
+    opacity: 1;      
+    pointer-events: none;
+}
+
+.info-oferta {
+    position: relative; /* Esto es lo que activa el z-index */
+    z-index: 10;        /* Nivel muy alto para asegurar que gane */
 }
 
 .dino-thumb {
@@ -247,9 +268,16 @@ nav a:hover { text-decoration: underline; }
     overflow: hidden;
 }
 
+#dinoCirculo{
+    transform: scale(1.5);
+    position:relative;
+    bottom: -0px; 
+    right: 10px;
+  
+}
+
 .dino-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
-/* --- FOOTER SECTION --- */
 .bottom-area {
     background-color: #dcdcdc;
     padding: 10px;
@@ -257,9 +285,8 @@ nav a:hover { text-decoration: underline; }
     gap: 10px;
 }
 
-/* Soporte Técnico (Caja Amarilla) */
 .tech-support {
-    background-color: #dcdba8; /* Ese amarillo específico de Valve */
+    background-color: #dcdba8; 
     border: 1px solid #a6a67a;
     border-radius: 5px;
     padding: 10px;
@@ -274,14 +301,13 @@ nav a:hover { text-decoration: underline; }
     font-size: 12px;
 }
 
-/* Noticias (Caja Blanca con scroll) */
 .latest-news {
     background-color: #e5e9ea;
     border: 1px solid #999;
     border-radius: 5px;
     flex: 1;
-    height: 150px; /* Altura fija */
-    overflow-y: scroll; /* Scrollbar nativo */
+    height: 150px; 
+    overflow-y: scroll;
     padding: 10px;
 }
 
@@ -289,7 +315,6 @@ nav a:hover { text-decoration: underline; }
 .news-title { font-weight: bold; color: #b33e00; font-size: 10px; display: block; }
 .news-date { font-size: 9px; color: #666; font-style: italic; }
 
-/* COPYRIGHT */
 .copyright {
     text-align: center;
     color: #6d7658;
