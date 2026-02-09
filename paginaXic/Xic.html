@@ -1,45 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog Personal</title>
+    <link rel="stylesheet" href="estilosXc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="estilosXc.css">
-        <title>Pagina </title>
-    </head>
+    <div class="main-container">
+        <header>
+            <h1>Blog Personal   </h1>
+            <p></p>
+        </header>
 
-    <body>
+        <main>
+            <article>
+                <span class="meta-info"></span>
+                <h2>¿Quien soy?</h2>
+                <p>un poco (por no decir casi nada) de informacion sobre mi</p>
+                <a href="blog1.html" class="read-more">Leer más →</a>
+            </article>
 
-        <div id="divEncabezado">
+            <article>
+                <span class="meta-info"></span>
+                <h2>¿Por que cree este blog?</h2>
+                <p>Informacion sobre esta pagina</p>
+                <a href="blog2.html" class="read-more">Leer más →</a>
+            </article>
 
-            <header>
-                <a href="https://github.com/Jxic-dv">Github</a>
-                <a href=""></a>
-            </header>
-                
+            <article>
+                <span class="meta-info"></span>
+                <h2>¿Quieres saber de mi equipo?</h2>
+                <p>Quieres indagar un poco mas sobre mi equipo? pillin, entra aca y te mandara a una lista con mi
+                    los demas de mi equipo 
+                </p>
+                <a href="blog3.html" class="read-more">Leer más →</a>
+            </article>
+
+            <article id="contenedorImg">
+                <span class="meta-info"></span>
+                <h2>Gracias por visitar mi pagina</h2>
+                <img id="imgFinal" src="bobesponjaisproudMax.png" alt="">
+            </article>
+
+            </main>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+            <div class="social-links">
+                <a href="https://github.com/Jxic-dv" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://steamcommunity.com/profiles/76561198343561142/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a>
             </div>
-        <div id="divPrincipal">
 
-            <h1 id="txtBienvenida"> Bienvenido a mi pagina web!</h1>
+        <footer>
+            <p>&copy; 2026 kinalito/dinoteam :v </p>
+        </footer>
+    </div>
 
-            <div id="divCuerpo">
-                
-            
-                <h3>¿Quien soy?</h3>
-                <article id="txtQuienSoy">Me llamo josé xic, soy el dueño y creador de esta pagina, estudio en kinalito en la carrera de informatica</article>
-
-                <h3>Que me gusta?</h3>
-                <article>Jugar juegos, escuchar musica, programar, </article>
-                
-                <img src="perro.png" alt="jugar" id="imgPerro">
-
-
-                <h2 id="txtSegundaBienvenida">pagina web creada por peticion de papá max</h2>
-                `
-                <img src="bobesponjaisproudMax.png" alt="bobesponja orgulloso de ser alumno de papá max" id="bobesponja">
-            </div>
-
-        </div>
-
-    </body>
-
+</body>
 </html>

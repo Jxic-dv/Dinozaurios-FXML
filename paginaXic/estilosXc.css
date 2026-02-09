@@ -1,49 +1,165 @@
-body{
-    font-family: sans-serif;
-    color: white;
-    background-color: black;
-    
-    
-}   
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-#divPrincipal{
-    border: 5px solid white;
+body {
+    background-color: #000000; 
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.main-container {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #e0e0e0;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px;
+    border-radius: 24px;
+    box-shadow: 0 10px 50px rgba(48, 43, 99, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header {
     text-align: center;
-    background-color: gray;
-    border-radius: 10px;
-    margin-top: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
 }
 
-#divCuerpo{
-    font-size: larger;
+.btn-regresar {
+  padding: 12px 24px;
+  font-size: 16px;
+
+  margin-top: 20px;
+  margin-left: 10px;
+
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-#txtBienvenida{
 
-    color: rgb(67, 213, 221);
-    
+.btn-regresar:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
 }
 
-#txtQuienSoy{
-
+header h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-#imgPerro{
-    transform: scaleX(110px);
-    transform: translateY(50px);
+header p {
+    color: #8e9aaf;
+    font-size: 1.1rem;
 }
 
-#bobesponja{
+article {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+article h2 {
+    color: #00d2ff; 
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.meta-info {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffdd57; 
+    margin-bottom: 15px;
+}
+
+#contenedorImg{
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+}
+
+#imgFinal{
     
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    height: 300px;
-    
+    margin: 0 auto;
+    width: 300px;
+    height: 190px;
 }
 
+#txtBlog2{
+    height: 50px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #00d2ff;
+    padding-bottom: 2px;
+}
+
+.read-more:hover {
+    color: #00d2ff;
+}
+
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #00d2ff;
+    transform: translateY(-5px); 
+    text-shadow: 0 0 10px #00d2ff;
+}
+
+.social-links a[title="Steam"]:hover {
+    color: #171a21;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+}
 
