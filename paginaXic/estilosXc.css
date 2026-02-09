@@ -115,6 +115,12 @@ article h2 {
     height: 50px;
 }
 
+#orangeCat{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
 .read-more {
     display: inline-block;
     margin-top: 15px;
